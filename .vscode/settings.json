@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "functional": "cpp",
+        "new": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp"
+    }
+}
