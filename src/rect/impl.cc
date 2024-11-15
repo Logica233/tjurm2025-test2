@@ -23,11 +23,11 @@ std::pair<cv::Rect, cv::RotatedRect> get_rect_by_contours(const cv::Mat& input) 
     cv::threshold(gray,dst,128,255,cv::THRESH_BINARY);
 
     cv::findContours(dst,contours,hierarchy,cv::RETR_TREE,cv::CHAIN_APPROX_SIMPLE);
-        for (size_t i = 0; i < contours.size(); i++)
+        for (size_t i=0;i<contours.size();i++)
         {
         boundingRect = cv::boundingRect(contours[i]);
         minAreaRect = cv::minAreaRect(contours[i]);
-            if (cv::isContourConvex(contours[i]) && contours[i].size() == 4) 
+            if (cv::isContourConvex(contours[i])) 
             {
                 break;
             }
